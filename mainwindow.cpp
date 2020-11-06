@@ -62,9 +62,8 @@ void MainWindow::on_pushButton_clicked()
 #endif
     }
     p.waitForBytesWritten();
-    p.closeWriteChannel();
-    p.waitForFinished();
     p.close();
+    p.waitForFinished();
     vc.release();
     cv::destroyAllWindows();
     qDebug() << "finish";
